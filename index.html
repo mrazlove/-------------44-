@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Marketplace</h1>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#">Главная страница</a></li>
+                    <li><a href="#">Категория</a>
+                        <ul>
+                            <li><a href="#food">Food</a></li>
+                            <li><a href="#for-home">For Home</a></li>
+                            <li><a href="#for-garden">For Garden</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <button id="cart-btn">Корзина(<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="food" class="products">
+                <h2>Еда</h2>
+                <button class="scroll-btn left" data-direction="left">&#9664;</button>
+                <div class="products-slider">
+                    <article class="product" data-product-id="1">
+                        <img src="./img/eda.webp" alt="Food 1">
+                        <h3>Food 1</h3>
+                        <p>500₽</p>
+                        <button class="buy-btn" data-product-id="1" data-price="5">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="2">
+                        <img src="./img/eda2.webp" alt="Food 2">
+                        <h3>Food 2</h3>
+                        <p>700₽</p>
+                        <button class="buy-btn" data-product-id="2" data-price="7">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="3">
+                        <img src="./img/eda3.webp" alt="Food 3">
+                        <h3>Food 3</h3>
+                        <p>600₽</p>
+                        <button class="buy-btn" data-product-id="3" data-price="6">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="4">
+                        <img src="./img/eda3.webp" alt="Food 3">
+                        <h3>Food 3</h3>
+                        <p>600₽</p>
+                        <button class="buy-btn" data-product-id="4" data-price="6">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="5">
+                        <img src="./img/eda3.webp" alt="Food 3">
+                        <h3>Food 3</h3>
+                        <p>600₽</p>
+                        <button class="buy-btn" data-product-id="5" data-price="6">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="6">
+                        <img src="./img/eda3.webp" alt="Food 3">
+                        <h3>Food 3</h3>
+                        <p>600₽</p>
+                        <button class="buy-btn" data-product-id="6" data-price="6">Добавить в корзину</button>
+                    </article>
+                    <button class="scroll-btn right" data-direction="right">&#9654;</button>
+                </div>
+            </section>
+
+            <section id="for-home" class="products">
+                <h2>Для квартиры</h2>
+                <button class="scroll-btn left" data-direction="left">&#9664;</button>
+                <div class="products-slider">
+                    <article class="product" data-product-id="7">
+                        <img src="./img/kv.webp" alt="Home 1">
+                        <h3>Home 1</h3>
+                        <p>150₽</p>
+                        <button class="buy-btn" data-product-id="7" data-price="15">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="8">
+                        <img src="./img/kv2.webp" alt="Home 2">
+                        <h3>Home 2</h3>
+                        <p>200₽</p>
+                        <button class="buy-btn" data-product-id="8" data-price="20">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="9">
+                        <img src="./img/kv3.webp" alt="Home 3">
+                        <h3>Home 3</h3>
+                        <p>250₽</p>
+                        <button class="buy-btn" data-product-id="9" data-price="25">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="10">
+                        <img src="./img/kv3.webp" alt="Home 3">
+                        <h3>Home 3</h3>
+                        <p>250₽</p>
+                        <button class="buy-btn" data-product-id="10" data-price="25">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="11">
+                        <img src="./img/kv3.webp" alt="Home 3">
+                        <h3>Home 3</h3>
+                        <p>250₽</p>
+                        <button class="buy-btn" data-product-id="11" data-price="25">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="12">
+                        <img src="./img/kv3.webp" alt="Home 3">
+                        <h3>Home 3</h3>
+                        <p>250₽</p>
+                        <button class="buy-btn" data-product-id="12" data-price="25">Добавить в корзину</button>
+                    </article>
+                    <button class="scroll-btn right" data-direction="right">&#9654;</button>
+                </div>
+            </section>
+
+            <section id="for-garden" class="products">
+                <h2>Для дачи</h2>
+                <button class="scroll-btn left" data-direction="left">&#9664;</button>
+                <div class="products-slider">
+                    <article class="product" data-product-id="13">
+                        <img src="./img/daha.webp" alt="Garden 1">
+                        <h3>Garden 1</h3>
+                        <p>575₽</p>
+                        <button class="buy-btn" data-product-id="13" data-price="30">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="14">
+                        <img src="./img/daha2.webp" alt="Garden 2">
+                        <h3>Garden 2</h3>
+                        <p>350₽</p>
+                        <button class="buy-btn" data-product-id="14" data-price="35">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="9">
+                        <img src="./img/daha3.webp" alt="Garden 3">
+                        <h3>Garden 3</h3>
+                        <p>400₽</p>
+                        <button class="buy-btn" data-product-id="15" data-price="40">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="16">
+                        <img src="./img/daha3.webp" alt="Garden 3">
+                        <h3>Garden 3</h3>
+                        <p>400₽</p>
+                        <button class="buy-btn" data-product-id="17" data-price="40">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="17">
+                        <img src="./img/daha3.webp" alt="Garden 3">
+                        <h3>Garden 3</h3>
+                        <p>400₽</p>
+                        <button class="buy-btn" data-product-id="17" data-price="40">Добавить в корзину</button>
+                    </article>
+                    <article class="product" data-product-id="18">
+                        <img src="./img/daha3.webp" alt="Garden 3">
+                        <h3>Garden 3</h3>
+                        <p>400₽</p>
+                        <button class="buy-btn" data-product-id="18" data-price="40">Добавить в корзину</button>
+                    </article>
+                    <button class="scroll-btn right" data-direction="right">&#9654;</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total: $<span id="total-price">0.00</span></p>
+        </div>
+    </div>
+
+    <button id="scroll-to-top" title="Наверх">↑</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
