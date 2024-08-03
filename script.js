@@ -98,4 +98,71 @@ $(document).ready(function () {
             $('#cart-modal').hide();
         }
     });
+window.onscroll = function(){
+    var scrollTopButton = document.getElementById('sroll-to-top');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+        scrollTopButton.style.display - 'block';
+    } else {
+        scrollTopButton.style.display = 'b'
+    }
+}
+
+let cart = {
+    items: [],
+    total: 0,
+    itemCount: 0
+};
+
+document.querySelectorAll('.buy-btn').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const productElement = event.target.closest('.product');
+        const productId = productElement.getAttribute('data-product-id');
+        const productName = productElement.querySelector('h3').innerText;
+        const productPrice = parseInt(productElement.querySelector('p').innerText.replace('₽', ''));
+
+        addToCart(productId, productName, productPrice);
+    });
+});
+
+function addToCart(productId, productName, productPrice) {
+    let existingProduct = cart.items.find(item => item.id === productId);
+
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        cart.items.push({
+            id: productId,
+            name: productName,
+            price: productPrice,
+            quantity: 1
+        });
+    }
+
+    cart.total += productPrice;
+    cart.itemCount++;
+    updateCartDisplay();
+}
+function updateCartDisplay() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = '';
+
+    cart.items.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.name} - ${item.price}₽ x ${item.quantity}`;
+        cartItemsContainer.appendChild(listItem);
+    });
+
+    document.getElementById('cart-total').textContent = `Общая сумма: ${cart.total}₽`;
+    document.getElementById('cart-count').textContent = `Количество товаров: ${cart.itemCount}`;
+}
+
+$(document).ready(function () {
+    $('#profile-btn').click(function () {
+        $('.profile-dropdown').toggle();
+    });
+    $(document).click(function (event) {
+        if (!$(event.target).closest('#profile-btn').length) {
+            $('.profile-dropdown').hide();
+        }
+    });
 });
